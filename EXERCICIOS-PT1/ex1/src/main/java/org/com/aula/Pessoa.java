@@ -2,11 +2,11 @@ package org.com.aula;
 
 public class Pessoa {
     private String nome;
-    private Sexo sexo;
+    private String sexo;
     private int idade;
     private boolean vegetariana;
 
-    public Pessoa(String nome, Sexo sexo, int idade, boolean vegetariana){
+    public Pessoa(String nome, String sexo, int idade, boolean vegetariana){
         this.nome = nome;
         this.sexo = sexo;
         this.idade = idade;
@@ -17,7 +17,7 @@ public class Pessoa {
         return nome;
     }
 
-    public Sexo getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
@@ -27,22 +27,6 @@ public class Pessoa {
 
     public boolean  getVegetariana() {
         return vegetariana;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setSexo(Sexo sexo) {
-        this.sexo = sexo;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
-    public void setVegetariana(boolean vegetariana) {
-        this.vegetariana = vegetariana;
     }
 
 }

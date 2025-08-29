@@ -13,10 +13,6 @@ de 13 anos em diante 2 kilos de carne
  */
 public class Ex1 {
 
-    public static Sexo definirSexo(String sexo){
-       return (sexo.equals("MASCULINO")) ? Sexo.MASCULINO : Sexo.FEMININO;
-    }
-
     public static boolean definirVegetariana(String veg){
         return (veg.equals("S")) ? true : false;
     }
@@ -28,15 +24,19 @@ public class Ex1 {
         String nome = leitura.nextLine();
 
         System.out.println("Digite seu sexo:  [MASCULINO, FEMININO]");
-        String sexo = leitura.nextLine();
+        String sexo = leitura.next();
 
         System.out.println("Digite sua idade: ");
         int idade = leitura.nextInt();
 
         System.out.println("Vegetariana? [S/N]");
-        String veg = leitura.nextLine();
+        String veg = leitura.next();
 
-        Pessoa p = new Pessoa(nome, definirSexo(sexo), idade, definirVegetariana(veg));
+        Pessoa p = new Pessoa(nome, sexo, idade, definirVegetariana(veg));
+        Churrasco c = new Churrasco(p);
+        c.verificarConsumo();
+
+        leitura.close();
 
     }
 }
